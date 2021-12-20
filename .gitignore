@@ -1,0 +1,11 @@
+# Environment variables
+/env
+
+# Mongo db volume data for persistence storage
+/db/mongo-volume/*
+
+# Idea IDE configs
+.idea
+kubectl
+kubectl.sha256
+minikube-linux-amd64

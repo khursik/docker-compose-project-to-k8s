@@ -1,0 +1,24 @@
+version: "3.3"
+services: 
+  client:
+    image: 'lukondefmwila/dkr-multicontainer-app-client'
+    #build: 
+     # dockerfile: Dockerfile 
+     # context: ./client
+    restart: on-failure
+    container_name: client
+    labels:
+      kompose.service.type: LoadBalancer
+    ports:
+      - '3000:3000'
+  backend:
+    image: 'lukondefmwila/dkr-multicontainer-app-backend'
+    #build: 
+     # dockerfile: Dockerfile 
+     # context: ./backend
+    restart: on-failure
+    container_name: backend
+    labels:
+      kompose.service.type: LoadBalancer
+    ports:
+      - '3001:3001'
